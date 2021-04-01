@@ -32,7 +32,12 @@ client.connect(err => {
  app.get('/addProduct' ,(req, res) =>{
   groceryInfo.find({})
   .toArray((err , documents) =>{
+    if (err ) {
+      res.json({msg: err})
+    } else{
       res.send(documents)
+    }
+      
   })
 })
 
