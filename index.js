@@ -16,7 +16,7 @@ res.send('Assalamualaikum')
 
 
 
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.0v4f5.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
+const uri = `mongodb+srv://groceryNetwork:test1234@cluster0.0v4f5.mongodb.net/groceryStore?retryWrites=true&w=majority`
 console.log(uri)
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
